@@ -3,7 +3,7 @@ name: Python application
 on:
   push:
     branches:
-      - master  # تأكد من تطابق اسم الفرع مع الفرع الذي تستخدمه في مستودعك
+      - master
   pull_request:
     branches:
       - master
@@ -28,17 +28,12 @@ jobs:
 
     - name: Run tests
       run: |
-        # تنفيذ اختباراتك هنا، إذا كنت تستخدمها
-        # على سبيل المثال: pytest
         pytest
 
     - name: Build application
       run: |
-        # بناء تطبيقك، إذا لزم الأمر
         python setup.py build
 
     - name: Deploy
       run: |
-        # خطوات النشر، إذا كانت ضرورية
         echo "Deploying application"
-
